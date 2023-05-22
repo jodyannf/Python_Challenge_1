@@ -16,6 +16,7 @@ with open(Budget_path) as csvfile:
     csv_header = next(csvreader)
     print(f" CSV Header: {csv_header}")
     print("Financial Analysis")
+    print("----------------------------")
 
     counter = 0 
     total = 0
@@ -40,7 +41,7 @@ with open(Budget_path) as csvfile:
             greatest_change = Change
             greatest_month = month 
 
-        if Change < greatest_change :
+        if Change < smallest_change :
             smallest_change = Change 
             smallest_month = month
 
