@@ -45,8 +45,16 @@ with open(Budget_path) as csvfile:
             smallest_change = Change 
             smallest_month = month
 
-    print("Total Months:" +  str(counter))
-    print ("Total: $" + str(total))
-    print (f"Average Change: ${round (total_change/(counter-1), 2)}")
-    print (f"Greatest Increase in profits: {greatest_month} ${greatest_change}")
-    print (f"Greatest Decrease in profits: {smallest_month} ${smallest_change}")
+data=(f"""
+Financial Analysis
+----------------------------
+Total Months: {counter}
+Total: ${total}
+Average Change: ${round (total_change/(counter-1), 2)}
+Greatest Increase in profits: {greatest_month} ${greatest_change}
+Greatest Decrease in profits: {smallest_month} ${smallest_change}""")  
+print(data)
+
+output_file = os.path.join('..',"Analysis", "budget_analysis.txt")
+with open(output_file,"w") as txtfile:
+    txtfile.write(data)
