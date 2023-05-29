@@ -61,8 +61,8 @@ Winner = max(Results, key=Results.get)
 data = f"""
 Total Votes: {count}
 Charles Casper Stockham:{Charles_percent}% {Charles_count}
-Diana Degette:{Diana_count}
-Raymon Anthony Doane:{Raymon_count}
+Diana Degette:{Diana_percent}% {Diana_count}
+Raymon Anthony Doane:{Raymon_percent}% {Raymon_count}
 Winner: {Winner}"""
 
 print(data)
